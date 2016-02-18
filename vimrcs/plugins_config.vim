@@ -56,8 +56,13 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 " => ZenCoding
 """"""""""""""""""""""""""""""
 " Enable all functions in all modes
-let g:user_zen_mode='a'
+" let g:user_zen_mode='a'
 
+""""""""""""""""""""""""""""""
+" => Emmet-vim
+""""""""""""""""""""""""""""""
+let g:user_emmet_complate_tag=1
+let g:user_emmet_expandabbr_key='<c-e>'
 
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
@@ -76,14 +81,20 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"当打开vim且没有文件时自动打开NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+" 只剩 NERDTree时自动关闭
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 let g:NERDTreeWinPos = "right"
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=40
+let NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_open_on_console_startup=1
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -142,9 +153,12 @@ func! SyntasticCheckCoffeescript()
 endfunc
 nnoremap <silent> <leader>l :call SyntasticCheckCoffeescript()<cr>
 
+" html
+let g:syntastic_html_tidy_exec = 'tidy5'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
+set updatetime=250
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
