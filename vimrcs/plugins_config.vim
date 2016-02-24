@@ -53,12 +53,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
 """"""""""""""""""""""""""""""
-" => ZenCoding
-""""""""""""""""""""""""""""""
-" Enable all functions in all modes
-" let g:user_zen_mode='a'
-
-""""""""""""""""""""""""""""""
 " => Emmet-vim
 """"""""""""""""""""""""""""""
 let g:user_emmet_complate_tag=1
@@ -162,3 +156,10 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 let g:gitgutter_enabled=1
 set updatetime=250
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gruvbox_italic=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" colorscheme gruvbox

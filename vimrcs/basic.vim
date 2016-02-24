@@ -147,7 +147,8 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    let g:solarized_termcolors=256
+    colorscheme solarized
 catch
 endtry
 
@@ -443,3 +444,4 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
+nnoremap <F3> :set hlsearch!<CR>
