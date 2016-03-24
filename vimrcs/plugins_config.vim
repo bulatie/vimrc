@@ -93,8 +93,8 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key="\<C-s>"
-
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<c-s>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
@@ -132,7 +132,7 @@ let g:go_fmt_command = "goimports"
 let g:syntastic_python_checkers=['pyflakes']
 
 " Javascript
-let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_javascript_checkers = ['jshint']
 
 " Go
 let g:syntastic_auto_loc_list = 1
