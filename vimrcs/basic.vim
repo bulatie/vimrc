@@ -431,13 +431,3 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""实用设置
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set pastetoggle=<F2>
-set nu
-set cuc "高亮光标所在列
-set cul 
-vmap <Leader>y "+y
-nnoremap <F3> :set hlsearch!<CR>
