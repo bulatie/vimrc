@@ -3,3 +3,9 @@ The awesome version includes a lot of great plugins, configurations and color sc
 
 	git clone https://github.com/bulatie/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_vimrc.sh
+
+then into vim install plugin:
+
+  :PlugInstall
+
+
