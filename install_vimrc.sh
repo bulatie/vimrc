@@ -9,4 +9,6 @@ source ~/.vim_runtime/vimrcs/extended.vim
 
 ' > ~/.vimrc
 
+vim +PlugInstall +qall
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
